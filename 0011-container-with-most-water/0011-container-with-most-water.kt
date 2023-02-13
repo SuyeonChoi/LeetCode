@@ -8,10 +8,8 @@ class Solution {
         var result = 0
 
         while (left < right) {
-            val leftHeight = height[left]
-            val rightHeight = height[right]
-            result = max(result, min(leftHeight, rightHeight) * (right - left))
-            if (leftHeight < rightHeight) {
+            result = max(result, min(height[left], height[right]) * (right - left))
+            if (height[left] < height[right]) {
                 left++
             } else {
                 right--
